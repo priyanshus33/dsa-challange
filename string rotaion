@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool check(string s1,string s2){
+    if(s1.length()!=s2.length()){
+        return false;
+    }
+    string r = s1+s2;
+    if(r.find(s2)!=-1){
+        return true;
+    }
+    return false;
+}
+int main(){
+    string s1;
+    cin>>s1;
+    string s2;
+    cin>>s2;
+    bool a =check(s1,s2);
+    if(a==true){
+        cout<<"strings are rotaion of each other"<<endl;
+
+    }else{
+        cout<<"strings are not the rotaions of each other"<<endl;
+    }
+return 0;}
